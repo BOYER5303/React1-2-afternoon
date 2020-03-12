@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{Component} from 'react';
+//import Header from './Header'
+import data from './data';
+import ContentCard from './Card'
 import './App.css';
+//import ButtonClick from './Button'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component{
+  constructor(){
+    super();
+  }
+  // this.state = {
+  //   clicks: 0,
+  //   show: true
+  // };
+  
+  // IncrementItem = () => {
+  // this.setState({ clicks: this.state.clicks + 1 });
+  //  }
+  //  DecreaseItem = () => {
+  //  this.setState({ clicks: this.state.clicks - 1 });
+  // }
+
+render(){
+  const commentShow = data.map(element => {
+      return <div key={element.id}>
+          <ContentCard data={element}/>  
+          
+      </div>})
+        return(
+            <div>
+              <div>{commentShow[0]}</div>  
+            </div>
+        )
+    }
+  }
 
 export default App;
