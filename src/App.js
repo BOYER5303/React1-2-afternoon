@@ -1,14 +1,17 @@
-import React,{Component} from 'react';
-//import Header from './Header'
+import React from 'react';
+import Header from './components/Header/Header'
 import data from './data';
-import ContentCard from './Card'
+import Body from './components/Body/Body'
 import './App.css';
 //import ButtonClick from './Button'
 
-class App extends Component{
-  constructor(){
-    super();
-  }
+function App() {
+  return (
+    <div className = "App">
+      <Body />
+    </div>
+  );
+}
   // this.state = {
   //   clicks: 0,
   //   show: true
@@ -21,18 +24,18 @@ class App extends Component{
   //  this.setState({ clicks: this.state.clicks - 1 });
   // }
 
-render(){
-  const commentShow = data.map(element => {
-      return <div key={element.id}>
-          <ContentCard data={element}/>  
+// render(){
+//   const commentShow = data.map(element => {
+//       return <div key={element.id}>
+//           <ContentCard data={element}/>  
           
-      </div>})
-        return(
-            <div>
-              <div>{commentShow[0]}</div>  
-            </div>
-        )
-    }
-  }
+//       </div>})
+//         return(
+//             <div>
+//               <div>{commentShow[0]}</div>  
+//             </div>
+//         )
+//     }
+//   }
 
 export default App;

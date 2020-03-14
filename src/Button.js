@@ -9,31 +9,31 @@
 
 
 
-export default function ButtonClick(){
-    return(
-      this.state = {
-        clicks: 0,
-        show: true
-      }
-    }
+// export default function ButtonClick(){
+//     return(
+//       this.state = {
+//         clicks: 0,
+//         show: true
+//       }
+//     }
   
-    IncrementItem = () => {
-      this.setState({ clicks: this.state.clicks + 1 });
-    }
-    DecreaseItem = () => {
-      this.setState({ clicks: this.state.clicks - 1 });
-    }
+//     IncrementItem = () => {
+//       this.setState({ clicks: this.state.clicks + 1 });
+//     }
+//     DecreaseItem = () => {
+//       this.setState({ clicks: this.state.clicks - 1 });
+//     }
     
-    render() {
-      return (
-        <div>
-            <button onClick={this.DecreaseItem}>Previous</button>
-            <button onClick={this.IncrementItem}>Next</button>
+//     render() {
+//       return (
+//         <div>
+//             <button onClick={this.DecreaseItem}>Previous</button>
+//             <button onClick={this.IncrementItem}>Next</button>
           
         
-        </div>
-      );
-    }
-  }
+//         </div>
+//       );
+//     }
+//   }
   
-  export default App;
+//   export default App;
